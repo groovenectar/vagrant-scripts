@@ -15,3 +15,7 @@ sudo apt-get update
 
 echo ">>> Installing base packages"
 sudo apt-get install curl unzip git-core ack-grep software-properties-common build-essential dtrx
+
+echo ">>> Configuring Git"
+git config http.postBuffer 524288000
+git config --global credential.helper 'cache --timeout=86400'
