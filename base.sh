@@ -14,7 +14,7 @@ echo ">>> Updating apt"
 sudo apt-get update
 
 echo ">>> Installing base packages"
-sudo apt-get install curl unzip git-core ack-grep software-properties-common build-essential dtrx
+sudo apt-get install curl -qq unzip git-core ack-grep software-properties-common build-essential dtrx
 
 echo ">>> Configuring Git"
 sudo chown vagrant:vagrant /home/vagrant/.gitconfig
