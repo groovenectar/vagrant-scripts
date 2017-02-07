@@ -31,10 +31,8 @@ vm_box = "bento/ubuntu-16.04" # Ubuntu 16.04, PHP 7.0/5.6, MySQL 5.6
 # vm_box = "ubuntu/precise64" # Ubuntu 12.04, PHP 5.3, MySQL 5.5
 
 # Config Github Settings
-github_username = "groovenectar"
-github_repo     = "vagrant-scripts"
-github_branch   = "master"
-github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
+# This will be the base URL where helper scripts are pulled from
+github_url = "https://raw.githubusercontent.com/groovenectar/vagrant-scripts/master"
 
 # Helpful information regarding the hostname and using email
 if ARGV[0] == 'up'
