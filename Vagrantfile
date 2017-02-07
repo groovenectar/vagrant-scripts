@@ -98,7 +98,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "shell", path: "#{github_url}/scripts/ngrok.sh", args: [github_url]
 
 	# phpMyAdmin (Recommended, requires Composer)
-	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder]
+	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder, hostname, server_ip]
 	
 	# Mailhog mail catching
 	config.vm.provision "shell", path: "#{github_url}/scripts/mailhog.sh", args: [github_url, hostname, server_ip]
