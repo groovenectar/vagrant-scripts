@@ -31,9 +31,8 @@ github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github
 
 # Helpful information regarding the hostname and using email
 if ARGV[0] == 'up'
-	print "Using hostname \"" + hostname + "\" and IP " + server_ip
-	print "\n\nEdit Vagrantfile to update hostname and IP"
-	print "\n\n\n\n"
+	print "\n\n\n\n>>> Using hostname \"" + hostname + "\" and IP " + server_ip
+	print "\n\n>>> Edit Vagrantfile to update hostname and IP\n\n\n\n"
 end
 
 # Start the config using above information
