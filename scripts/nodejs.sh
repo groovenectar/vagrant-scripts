@@ -7,7 +7,7 @@ echo ">>> Installing NPM and Node"
 cd ~
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
-sudo apt-get -qq install nodejs
+sudo apt-get -qq install nodejs > /dev/null
 # :(
 sudo rm /usr/bin/node
 sudo ln -s /usr/bin/nodejs /usr/bin/node
