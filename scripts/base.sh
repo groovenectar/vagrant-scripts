@@ -11,10 +11,10 @@ sudo swapon /swapfile
 sudo echo "/swapfile   none    swap    sw    0   0" | tee -a /etc/fstab
 
 echo ">>> Updating apt"
-sudo apt-get update
+sudo apt-get -qq update
 
 echo ">>> Installing base packages"
-sudo apt-get install curl -qq unzip git-core ack-grep software-properties-common build-essential dtrx
+sudo apt-get -qq install curl unzip git-core ack-grep software-properties-common build-essential dtrx
 
 echo ">>> Configuring Git"
 sudo chown vagrant:vagrant /home/vagrant/.gitconfig
