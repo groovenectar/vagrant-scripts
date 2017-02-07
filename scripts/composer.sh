@@ -2,6 +2,8 @@
 
 github_url="$1"
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing Composer"
 cd ~
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
