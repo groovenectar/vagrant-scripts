@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing Modman"
 
 SRC="https://raw.githubusercontent.com/colinmollenhour/modman/master/modman"
