@@ -9,8 +9,8 @@ echo ">>> Setting up locale"
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-dpkg-reconfigure locales
+locale-gen en_US.UTF-8 > /dev/null
+dpkg-reconfigure locales > /dev/null
 
 echo ">>> Setting up swap"
 sudo fallocate -l ${server_swap}M /swapfile
