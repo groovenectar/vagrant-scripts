@@ -2,18 +2,22 @@
 # vi: set ft=ruby :
 
 # Specify hostname -- need to update the OS hosts file to use this, otherwise use IP
-hostname = "vagrant.dev"
+hostname = "vagrant.local"
 
 # The guest VM folder that will be the root of the project files (can be outside webserver document root)
 synced_folder = "/var/www/#{hostname}"
 
 # The guest VM folder that will be the webserver document root (e.g. /var/www/#{hostname}/public)
 public_folder = "/var/www/#{hostname}/public"
+
+# Guest VM IP address -- Change this if you will have multiple boxes running at once
 server_ip = "192.168.33.94"
 
+# Configure MySQL
 mysql_root_password   = "root" # We'll assume user "root"
 mysql_create_database = "" # Blank to skip
 
+# VM resources settings
 server_cpus   = "2"    # Cores
 server_memory = "2000" # MB
 server_swap   = "2000" # Options: false | int (MB) - Guideline: Between one or two times the server_memory
