@@ -9,7 +9,7 @@ echo ">>> Installing MySQL latest distribution version"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password ${mysql_root_password}"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password ${mysql_root_password}"
 
-sudo apt-get -qq install mysql-server
+sudo apt-get -qq install mysql-server > /dev/null
 
 if [[ -n "${mysql_create_database}" ]]; then
 	echo ">>> Creating new MySQL database"
