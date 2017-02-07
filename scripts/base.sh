@@ -3,6 +3,15 @@
 github_url="$1"
 server_swap="$2"
 
+export DEBIAN_FRONTEND=noninteractive
+
+echo ">>> Setting up locale"
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+
 echo ">>> Setting up swap"
 sudo fallocate -l ${server_swap}M /swapfile
 sudo chmod 600 /swapfile
