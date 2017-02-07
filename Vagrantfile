@@ -72,24 +72,27 @@ Vagrant.configure("2") do |config|
 
 	# Base Packages and Config
 	config.vm.provision "shell", path: "#{github_url}/scripts/base.sh", args: [github_url, server_swap]
-	
-	# Nginx (latest distribution-supported version)
+
+	# Nginx (Latest distribution-supported version)
 	config.vm.provision "shell", path: "#{github_url}/scripts/nginx-dist.sh", args: [github_url, hostname, public_folder]
 
-	# MySQL (latest distribution-supported version)
+	# MySQL (Latest distribution-supported version)
 	config.vm.provision "shell", path: "#{github_url}/scripts/mysql-dist.sh", args: [github_url, mysql_root_password, mysql_create_database]
 
-	# PHP 7 (latest distribution-supported version only for Ubuntu 16.04)
+	# PHP 7 (Latest distribution-supported version only for Ubuntu 16.04)
 	config.vm.provision "shell", path: "#{github_url}/scripts/php70-dist.sh", args: [github_url]
 
 	# NodeJS
 	config.vm.provision "shell", path: "#{github_url}/scripts/nodejs.sh", args: [github_url]
 
-	# Bower (requires NodeJS)
+	# Bower (Requires NodeJS)
 	config.vm.provision "shell", path: "#{github_url}/scripts/bower.sh", args: [github_url]
-	
-	# Composer (requires PHP)
+
+	# Composer (Requires PHP)
 	config.vm.provision "shell", path: "#{github_url}/scripts/composer.sh", args: [github_url]
+
+	# phpMyAdmin (Recommended, requires Composer)
+	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder]
 
 	# Modman
 	config.vm.provision "shell", path: "#{github_url}/scripts/modman.sh", args: [github_url]
