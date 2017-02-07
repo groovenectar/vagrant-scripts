@@ -98,16 +98,16 @@ EOL
 	sudo chmod +x "${sendmail_path}"
 fi
 
-echo
-echo
-echo
+echo ""
+echo ""
+echo ""
 echo ">>> Mailhog installed. Use the following information to use email:"
-echo
-echo "SMTP port: 1025\n"
-echo "SMTP server: localhost\n"
-echo "SMTP SSL/TLS: none\n"
-echo "SMTP authentication: none\n"
-echo "HTTP mail viewing port: 8025\n"
-echo "URL to view mail: http://${server_ip}:8025 or http://${hostname}:8025/\n\n\n\n"
-echo
-echo
+echo ""
+echo "SMTP port: 1025"
+echo "SMTP server: localhost"
+echo "SMTP SSL/TLS: none"
+echo "SMTP authentication: none"
+echo "HTTP mail viewing port: 8025"
+echo "URL to view mail: http://${server_ip}:8025 or http://${hostname}:8025/"
+echo ""
+echo ""
