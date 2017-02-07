@@ -1,10 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Specify hostname -- need to update the OS hosts file to use this, otherwise use IP
 hostname = "vagrant.dev"
-# The server folder that will contain the root of the files
+
+# The guest VM folder that will be the root of the project files (can be outside webserver document root)
 synced_folder = "/var/www/#{hostname}"
-# The server folder that will be the document root (e.g. /var/www/#{hostname}/public)
+
+# The guest VM folder that will be the webserver document root (e.g. /var/www/#{hostname}/public)
 public_folder = "/var/www/#{hostname}/public"
 server_ip = "192.168.33.94"
 
