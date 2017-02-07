@@ -5,7 +5,7 @@ hostname="$2"
 public_folder="$3"
 
 echo ">>> Installing nginx"
-sudo apt-get install -qq nginx
+sudo apt-get -qq install nginx
 
 echo ">>> Configuring nginx"
 sudo usermod -a -G www-data vagrant
@@ -19,7 +19,7 @@ sudo wget -q -O /etc/nginx/fastcgi.conf ${github_url}/nginx/fastcgi_params
 sudo wget -q -O /etc/nginx/sites-available/default ${github_url}/nginx/default
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-sed -i "s|^\\s*server_name\s*.*|\\tserver_name ${hostname};|" /etc/nginx/sites-available/default
-sed -i "s|^\\s*root\s*.*|\\troot ${public_folder};|" /etc/nginx/sites-available/default
+sudo sed -i "s|^\\s*server_name\s*.*|\\tserver_name ${hostname};|" /etc/nginx/sites-available/default
+sudo sed -i "s|^\\s*root\s*.*|\\troot ${public_folder};|" /etc/nginx/sites-available/default
 
 sudo service nginx restart
