@@ -3,6 +3,11 @@
 github_url="$1"
 server_swap="$2"
 
+# Fix for: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+# http://serverfault.com/a/717770
+sudo ex +"%s@DPkg@//DPkg" -cwq /etc/apt/apt.conf.d/70debconf
+sudo dpkg-reconfigure debconf -f noninteractive -p critical
+
 export DEBIAN_FRONTEND=noninteractive
 
 echo ">>> Setting up locale"
