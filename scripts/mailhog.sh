@@ -4,6 +4,8 @@ github_url="$1"
 hostname="$2"
 server_ip="$3"
 
+export DEBIAN_FRONTEND=noninteractive
+
 init=$(which init)
 
 echo
