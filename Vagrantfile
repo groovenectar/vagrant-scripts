@@ -91,15 +91,15 @@ Vagrant.configure("2") do |config|
 	# Composer (Requires PHP)
 	config.vm.provision "shell", path: "#{github_url}/scripts/composer.sh", args: [github_url]
 
-	# phpMyAdmin (Recommended, requires Composer)
-	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder]
-
 	# Modman
 	config.vm.provision "shell", path: "#{github_url}/scripts/modman.sh", args: [github_url]
 
 	# Ngrok
 	config.vm.provision "shell", path: "#{github_url}/scripts/ngrok.sh", args: [github_url]
 
+	# phpMyAdmin (Recommended, requires Composer)
+	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder]
+	
 	# Mailhog mail catching
 	config.vm.provision "shell", path: "#{github_url}/scripts/mailhog.sh", args: [github_url, hostname, server_ip]
 
