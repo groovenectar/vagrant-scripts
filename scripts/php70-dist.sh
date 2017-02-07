@@ -15,6 +15,20 @@ sudo sed -i "s/memory_limit = .*/memory_limit = 1024M/" /etc/php/7.0/cli/php.ini
 
 echo ">>> Installing PHP7.0 modules"
 sudo apt-get -qq install php7.0-mcrypt > /dev/null
+sudo apt-get -qq install php7.0-xml > /dev/null
+sudo apt-get -qq install php7.0-mbstring > /dev/null
+sudo apt-get -qq install php7.0-mysqli > /dev/null
+sudo apt-get -qq install php7.0-curl > /dev/null
+sudo apt-get -qq install php7.0-tidy > /dev/null
+
+sudo phpenmod mcrypt
+sudo phpenmod xml
+sudo phpenmod dom
+sudo phpenmod simplexml
+sudo phpenmod mbstring
+sudo phpenmod mysqli
+sudo phpenmod curl
+sudo phpenmod tidy
 sudo phpenmod mcrypt
 
 sudo service php7.0-fpm restart
