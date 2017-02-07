@@ -13,6 +13,9 @@ sudo sed -i "s/user www-data;/user vagrant;/" /etc/nginx/nginx.conf
 sudo sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
 
 sudo wget -O /etc/nginx/nginx.conf ${github_url}/nginx/nginx.conf
+sudo wget -O /etc/nginx/fastcgi_params ${github_url}/nginx/fastcgi_params
+sudo wget -O /etc/nginx/fastcgi.conf ${github_url}/nginx/fastcgi_params
+
 sudo wget -O /etc/nginx/sites-available/default ${github_url}/nginx/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
