@@ -4,6 +4,8 @@ github_url="$1"
 hostname="$2"
 public_folder="$3"
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing nginx"
 sudo apt-get -qq install nginx > /dev/null
 
