@@ -14,7 +14,7 @@ sudo sed -i "s/max_execution_time = .*/max_execution_time = 180/" /etc/php/7.0/c
 sudo sed -i "s/memory_limit = .*/memory_limit = 1024M/" /etc/php/7.0/cli/php.ini
 
 echo ">>> Installing PHP7.0 modules"
-sudo apt-get -qq install php7.0-mcrypt
+sudo apt-get -qq install php7.0-mcrypt > /dev/null
 sudo phpenmod mcrypt
 
 sudo service php7.0-fpm restart
