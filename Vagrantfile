@@ -31,15 +31,6 @@ github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github
 
 # Helpful information regarding the hostname and using email
 if ARGV[0] == 'up'
-	print "\n\n\n"
-	print ">>> Mailhog installed. Use the following information to use email:\n\n"
-	print "SMTP port: 1025\n"
-	print "SMTP server: localhost\n"
-	print "SMTP SSL/TLS: none\n"
-	print "SMTP authentication: none\n"
-	print "HTTP mail viewing port: 8025\n"
-	print "URL to view mail: http://#{server_ip}:8025 or http://#{hostname}:8025/\n\n\n\n"
-
 	print "Using hostname \"" + hostname + "\" and IP " + server_ip
 	print "\n\nEdit Vagrantfile to update hostname and IP"
 	print "\n\n\n\n"
@@ -94,13 +85,13 @@ Vagrant.configure("2") do |config|
 	# Composer (requires PHP)
 	config.vm.provision "shell", path: "#{github_url}/scripts/composer.sh", args: [github_url]
 
-	# Mailhog mail catching
-	config.vm.provision "shell", path: "#{github_url}/scripts/mailhog.sh", args: [github_url]
-
 	# Modman
 	config.vm.provision "shell", path: "#{github_url}/scripts/modman.sh", args: [github_url]
 
 	# Ngrok
 	config.vm.provision "shell", path: "#{github_url}/scripts/ngrok.sh", args: [github_url]
+
+	# Mailhog mail catching
+	config.vm.provision "shell", path: "#{github_url}/scripts/mailhog.sh", args: [github_url]
 
 end
