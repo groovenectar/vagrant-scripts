@@ -4,6 +4,8 @@ github_url="$1"
 mysql_root_password="$2"
 mysql_create_database="$3"
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing MySQL latest distribution version"
 
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password ${mysql_root_password}"
