@@ -20,5 +20,5 @@ echo ">>> Configuring Git"
 curl --silent -L ${github_url}/git/.gitconfig > /home/vagrant/.gitconfig
 sudo chown vagrant:vagrant /home/vagrant/.gitconfig
 
-git config http.postBuffer 524288000
+git config --global http.postBuffer 524288000
 git config --global credential.helper 'cache --timeout=86400'
