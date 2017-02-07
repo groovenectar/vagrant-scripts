@@ -8,7 +8,7 @@ Defaults
 * NodeJS (Lastest version from source -- not distro version)
 * Bower
 * Composer
-* phpMyAdmin (Accessed from http://[server_ip]/phpmyadmin without affecting worktree)
+* phpMyAdmin (Accessed from http://[ip_or_host]/phpmyadmin without affecting worktree)
 * Modman
 * Ngrok
 * Mailhog
