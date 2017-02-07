@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo ">>> Installing PHP7.0"
-sudo apt-get -qq install php7.0
+sudo apt-get -qq install php7.0 > /dev/null
 
 echo ">>> Configuring PHP7.0"
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 180/" /etc/php/7.0/fpm/php.ini
