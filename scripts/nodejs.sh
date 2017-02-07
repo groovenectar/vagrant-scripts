@@ -5,8 +5,8 @@ github_url="$1"
 echo ">>> Installing NPM and Node"
 
 cd ~
-curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh > /dev/null
+sudo bash nodesource_setup.sh > /dev/null
 sudo apt-get -qq install nodejs > /dev/null
 # :(
 sudo rm /usr/bin/node
