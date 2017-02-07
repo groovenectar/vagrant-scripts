@@ -13,5 +13,5 @@ sudo apt-get -qq install mysql-server > /dev/null
 
 if [[ -n "${mysql_create_database}" ]]; then
 	echo ">>> Creating new MySQL database"
-	echo "CREATE DATABASE IF NOT EXISTS ${mysql_create_database} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" | mysql -u root -p"${mysql_root_password}"  > /dev/null
+	echo "CREATE DATABASE IF NOT EXISTS ${mysql_create_database} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" | mysql -u root -p"${mysql_root_password}"  &> /dev/null
 fi
