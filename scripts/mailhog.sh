@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+github_url="$1"
+hostname="$2"
+server_ip="$3"
+
 init=$(which init)
 
 echo
@@ -95,8 +99,15 @@ EOL
 fi
 
 echo
-echo ">>> Mailhog installed"
 echo
-echo "Default SMTP port: 1025"
-echo "Default HTTP port: 8025"
+echo
+echo ">>> Mailhog installed. Use the following information to use email:"
+echo
+echo "SMTP port: 1025\n"
+echo "SMTP server: localhost\n"
+echo "SMTP SSL/TLS: none\n"
+echo "SMTP authentication: none\n"
+echo "HTTP mail viewing port: 8025\n"
+echo "URL to view mail: http://${server_ip}:8025 or http://${hostname}:8025/\n\n\n\n"
+echo
 echo
