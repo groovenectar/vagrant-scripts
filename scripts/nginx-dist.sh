@@ -5,7 +5,7 @@ hostname="$2"
 public_folder="$3"
 
 echo ">>> Installing nginx"
-sudo apt-get -qq install nginx
+sudo apt-get -qq install nginx > /dev/null
 
 echo ">>> Configuring nginx"
 sudo usermod -a -G www-data vagrant
