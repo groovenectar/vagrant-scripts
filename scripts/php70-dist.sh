@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing PHP7.0"
 sudo apt-get -qq install php7.0 > /dev/null
 
