@@ -48,7 +48,7 @@ end
 # Start the config using above information
 Vagrant.configure("2") do |config|
 
-	config.vm.box = "" # Filesystem path to box file
+	config.vm.box = vm_box
 	config.vm.define "#{hostname}" do |vagrant|
 	end
 
