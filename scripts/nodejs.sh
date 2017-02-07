@@ -2,6 +2,8 @@
 
 github_url="$1"
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing NPM and Node"
 
 cd ~
