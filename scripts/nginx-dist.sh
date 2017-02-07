@@ -19,7 +19,7 @@ sudo wget -O /etc/nginx/fastcgi.conf ${github_url}/nginx/fastcgi_params
 sudo wget -O /etc/nginx/sites-available/default ${github_url}/nginx/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-sed -i "s|^\\s*server_name\s*.*|\\tserver_name #{hostname};|" /etc/nginx/sites-available/default
-sed -i "s|^\\s*root\s*.*|\\troot #{public_folder};|" /etc/nginx/sites-available/default
+sed -i "s|^\\s*server_name\s*.*|\\tserver_name ${hostname};|" /etc/nginx/sites-available/default
+sed -i "s|^\\s*root\s*.*|\\troot ${public_folder};|" /etc/nginx/sites-available/default
 
 sudo service nginx restart
