@@ -13,6 +13,9 @@ sudo sed -i "s/post_max_size = .*/post_max_size = 50M/" /etc/php/7.0/fpm/php.ini
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 180/" /etc/php/7.0/cli/php.ini
 sudo sed -i "s/memory_limit = .*/memory_limit = 1024M/" /etc/php/7.0/cli/php.ini
 
+sudo sed -i "s/user = .*/user = vagrant/" /etc/php/7.0/fpm/pool.d/www.conf
+sudo sed -i "s/group = .*/group = vagrant/" /etc/php/7.0/fpm/pool.d/www.conf
+
 echo ">>> Installing PHP7.0 modules"
 sudo apt-get -qq install php7.0-mcrypt > /dev/null
 sudo apt-get -qq install php7.0-xml > /dev/null
