@@ -33,7 +33,7 @@ vm_box = "bento/ubuntu-16.04" # Ubuntu 16.04, PHP 7.0/5.6, MySQL 5.6
 # This will be the base URL where install scripts are pulled from
 github_url = "https://raw.githubusercontent.com/groovenectar/vagrant-scripts/master"
 
-# Helpful information regarding the hostname and using email
+# Helpful reference information regarding the hostname and IP
 if ARGV[0] == 'up'
 	print "\n\n\n\n>>> Using hostname \"" + hostname + "\" and IP " + server_ip
 	print "\n\n>>> Edit Vagrantfile to update hostname and IP\n\n\n\n"
