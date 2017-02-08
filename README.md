@@ -1,3 +1,6 @@
+Usage
+-----
+
 Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included.
 
 Defaults
