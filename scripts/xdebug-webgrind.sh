@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+github_url="$1"
+public_folder="$2"
+
 export DEBIAN_FRONTEND=noninteractive
 
 echo ">>> Installing Xdebug and Webgrind"
