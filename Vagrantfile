@@ -94,6 +94,9 @@ Vagrant.configure("2") do |config|
 	# Ngrok
 	config.vm.provision "shell", path: "#{github_url}/scripts/ngrok.sh", args: [github_url]
 
+	# Xdebug and Webgrind
+	config.vm.provision "shell", path: "#{github_url}/scripts/xdebug-webgrind.sh", args: [github_url, hostname, server_ip]
+	
 	# PHPUnit (Latest ~ 6)
 	# config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-latest.sh", args: [github_url]
 	
