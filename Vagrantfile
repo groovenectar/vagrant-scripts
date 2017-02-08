@@ -103,4 +103,8 @@ Vagrant.configure("2") do |config|
 	# Mailhog mail catching
 	config.vm.provision "shell", path: "#{github_url}/scripts/mailhog.sh", args: [github_url, hostname, server_ip]
 
+	# Import database
+	# config.vm.provision "shell",
+	#	inline: "echo \">>> Importing SQL file\" && mysql -u root -p#{mysql_root_password} #{mysql_create_database} < #{public_folder}/db.sql &> /dev/null"
+
 end
