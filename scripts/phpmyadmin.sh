@@ -18,6 +18,14 @@ sudo ln -s /var/www/phpmyadmin ${public_folder}/phpmyadmin
 cd /var/www/phpmyadmin
 composer -q install > /dev/null
 
+# Adding configuration options
+config="/var/www/phpmyadmin/config.inc.php"
+sudo /bin/cat <<EOF >$config
+<?php
+
+\$cfg['LoginCookieValidity'] = '10800';
+EOF
+
 echo ""
 echo ""
 echo ""
