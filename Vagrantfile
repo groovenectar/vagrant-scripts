@@ -95,7 +95,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "shell", path: "#{github_url}/scripts/ngrok.sh", args: [github_url]
 
 	# PHPUnit
-	config.vm.provision "shell", path: "#{github_url}/scripts/phpunit.sh", args: [github_url]
+	config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-5.sh", args: [github_url]
 	
 	# phpMyAdmin (Recommended, requires Composer)
 	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder, hostname, server_ip]
