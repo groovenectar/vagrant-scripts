@@ -1,0 +1,37 @@
+# Misc
+/.vagrant
+/vendor
+/webgrind
+/phpmyadmin
+node_modules
+npm-debug.log
+bower_components
+tmp/
+*.tmp
+*.lock
+temp/
+cache/
+.env
+*.log
+.sass-cache
+
+# IDE
+/.idea
+/nbproject/
+/sftp_setup
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+
+# OS
+Desktop.ini
+Thumbs.db
+.Trash-*
+.directory
+*~
+._*
+*.DS_Store
+.Trashes
+.AppleDouble
+.LSOverride
+.~lock.*#
