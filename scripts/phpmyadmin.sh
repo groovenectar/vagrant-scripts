@@ -23,7 +23,9 @@ config="/var/www/phpmyadmin/config.inc.php"
 sudo /bin/cat <<EOF >$config
 <?php
 
+ini_set('session.gc_maxlifetime', 10800);
 \$cfg['LoginCookieValidity'] = '10800';
+\$cfg['blowfish_secret'] = 'r5MoEmQzZzyIQkLZ4e7^%iZIs@NwQ%HL';
 EOF
 
 echo ""
