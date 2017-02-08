@@ -1,3 +1,5 @@
+Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included.
+
 Defaults
 ========
 
@@ -11,5 +13,7 @@ Defaults
 * phpMyAdmin (Accessed from http://[IP_OR_HOST]/phpmyadmin. Add /phpmyadmin to .gitignore)
 * Modman
 * PHPUnit (Version 5.6, latest available as well)
+* Xdebug (Latest distro apt version)
+* Webgrind (Accessed from http://[IP_OR_HOST]/webgrind. Add /webgrind to .gitignore)
 * Ngrok
 * Mailhog
