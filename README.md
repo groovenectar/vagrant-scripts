@@ -8,7 +8,8 @@ Defaults
 * NodeJS (Lastest version from source -- not distro version)
 * Bower
 * Composer
-* phpMyAdmin (Recommended. Accessed from http://[IP_OR_HOST]/phpmyadmin. Add /phpmyadmin to .gitignore)
+* phpMyAdmin (Accessed from http://[IP_OR_HOST]/phpmyadmin. Add /phpmyadmin to .gitignore)
 * Modman
+* PHPUnit (Version 5.6, latest available as well)
 * Ngrok
 * Mailhog
