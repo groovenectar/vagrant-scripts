@@ -25,3 +25,11 @@ sudo sed -i "s|^\\s*server_name\s*.*|\\tserver_name ${hostname};|" /etc/nginx/si
 sudo sed -i "s|^\\s*root\s*.*|\\troot ${public_folder};|" /etc/nginx/sites-available/default
 
 sudo service nginx restart
+
+(sudo tee /usr/sbin/weberr <<EOL
+#!/usr/bin/env bash
+sudo tail -n300 -f /var/log/nginx/error.log
+EOL
+) &>/dev/null
+
+sudo chmod +x /usr/sbin/weberr
