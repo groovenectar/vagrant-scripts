@@ -3,6 +3,15 @@ Usage
 
 Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included.
 
+Notes
+-----
+
+Shortcut scripts:
+
+* `weberr` - Tail the Nginx log and follow output
+* `dberr` - Tail the MySQL log and follow output
+* `phperr` - Tail the PHP log and follow output
+
 Defaults
 --------
 
