@@ -22,10 +22,10 @@ Defaults
 * NodeJS (Lastest version from source -- not distro version)
 * Bower
 * Composer
-* phpMyAdmin (Accessed from http://[IP_OR_HOST]/phpmyadmin. Add /phpmyadmin to .gitignore)
+* phpMyAdmin (Accessed from `http://[IP_OR_HOST]/phpmyadmin`. Add `/phpmyadmin` to .gitignore)
 * Modman
 * PHPUnit (Version 5.6, latest available as well)
 * Xdebug (Latest distro apt version)
-* Webgrind (Accessed from http://[IP_OR_HOST]/webgrind. Add /webgrind to .gitignore)
+* Webgrind (Accessed from `http://[IP_OR_HOST]/webgrind`. Add `/webgrind` to .gitignore)
 * Ngrok
 * Mailhog
