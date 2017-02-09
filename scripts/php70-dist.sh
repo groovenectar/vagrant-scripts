@@ -35,3 +35,11 @@ sudo phpenmod tidy
 sudo phpenmod mcrypt
 
 sudo service php7.0-fpm restart
+
+(sudo tee /usr/sbin/phperr <<EOL
+#!/usr/bin/env bash
+sudo tail -n300 -f /var/log/php5-fpm.log
+EOL
+) &>/dev/null
+
+sudo chmod +x /usr/sbin/phperr
