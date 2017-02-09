@@ -1,7 +1,7 @@
 Usage
 -----
 
-Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included.
+Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included with directives that should be a safe starting point for most any project.
 
 Notes
 -----
