@@ -107,6 +107,10 @@ if [[ "${tiny}" = true ]]; then
         cron_schedule
         smtppro_email_log
         sendfriend_log
+        core_session
+        api_session
+        dataflow_session
+        persistent_session
     )
 
     for table in "${ignore_tables_array[@]}"
