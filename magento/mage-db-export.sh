@@ -104,6 +104,7 @@ if [[ "${tiny}" = true ]]; then
         catalogindex_aggregation
         catalogindex_aggregation_tag
         catalogindex_aggregation_to_tag
+        cron_schedule
         smtppro_email_log
         sendfriend_log
     )
