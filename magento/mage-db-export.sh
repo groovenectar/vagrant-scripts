@@ -107,6 +107,7 @@ if [[ "${tiny}" = true ]]; then
         cron_schedule
         smtppro_email_log
         sendfriend_log
+        amx_audittrail_records
         core_session
         api_session
         dataflow_session
