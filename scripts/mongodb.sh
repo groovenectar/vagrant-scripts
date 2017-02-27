@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-# https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
+github_url="$1"
 
 export DEBIAN_FRONTEND=noninteractive
 
 echo ">>> Installing MongoDB"
+
+# https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 
