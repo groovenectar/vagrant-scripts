@@ -12,7 +12,7 @@ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" 
 
 sudo apt-get update
 
-sudo apt-get install -y mongodb-org
+sudo apt-get -qq install mongodb-org > /dev/null
 
 (sudo tee /etc/systemd/system/mongodb.service <<EOL
 [Unit]
@@ -29,3 +29,8 @@ EOL
 ) &>/dev/null
 
 sudo systemctl start mongodb
+
+php_version=$(php -r 'preg_match("#^\d.\d#", PHP_VERSION, $match); echo $match[0];')
+sudo apt-get -qq install php-mongodb > /dev/null
+sudo phpenmod mongodb
+sudo service php${php_version}-fpm restart
