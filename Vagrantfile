@@ -83,6 +83,9 @@ Vagrant.configure("2") do |config|
 	# MongoDB (Latest stable version)
 	# config.vm.provision "shell", path: "#{github_url}/scripts/mongodb.sh", args: [github_url]
 
+	# Redis (Latest stable version)
+	# config.vm.provision "shell", path: "#{github_url}/scripts/redis.sh", args: [github_url]
+	
 	# NodeJS
 	config.vm.provision "shell", path: "#{github_url}/scripts/nodejs.sh", args: [github_url]
 
