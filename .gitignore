@@ -11,7 +11,7 @@ tmp/
 *.tmp
 *.lock
 temp/
-.cache
+*.cache
 .env
 *.log
 .sass-cache
