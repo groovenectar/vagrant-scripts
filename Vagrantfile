@@ -74,8 +74,8 @@ Vagrant.configure("2") do |config|
 	# Nginx (Latest distribution-supported version)
 	config.vm.provision "shell", path: "#{github_url}/scripts/nginx-dist.sh", args: [github_url, hostname, public_folder]
 
-	# PHP 7 (Latest distribution-supported version only for Ubuntu 16.04)
-	config.vm.provision "shell", path: "#{github_url}/scripts/php70-dist.sh", args: [github_url]
+	# PHP 7.1
+	config.vm.provision "shell", path: "#{github_url}/scripts/php7.1.sh", args: [github_url]
 
 	# MySQL (Latest distribution-supported version)
 	config.vm.provision "shell", path: "#{github_url}/scripts/mysql-dist.sh", args: [github_url, mysql_root_password, mysql_create_database]
