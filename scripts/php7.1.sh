@@ -3,6 +3,8 @@
 export DEBIAN_FRONTEND=noninteractive
 
 echo ">>> Installing PHP7.1"
+sudo add-apt-repository -y ppa:ondrej/php > /dev/null
+sudo apt-get update > /dev/null
 sudo apt-get -qq install php7.1 > /dev/null
 
 echo ">>> Configuring PHP7.1"
