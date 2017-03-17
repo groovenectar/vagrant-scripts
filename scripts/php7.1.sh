@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 echo ">>> Installing PHP7.1"
 sudo add-apt-repository -y ppa:ondrej/php > /dev/null
 sudo apt-get update > /dev/null
-sudo apt-get -qq install php7.1 > /dev/null
+sudo apt-get -qq install php7.1 php7.1-fpm php7.1-cli > /dev/null
 
 echo ">>> Configuring PHP7.1"
 sudo sed -i "s/max_execution_time = .*/max_execution_time = 180/" /etc/php/7.1/fpm/php.ini
