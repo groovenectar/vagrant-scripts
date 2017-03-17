@@ -24,6 +24,7 @@ sudo apt-get -qq install php7.0-mysqli > /dev/null
 sudo apt-get -qq install php7.0-curl > /dev/null
 sudo apt-get -qq install php7.0-tidy > /dev/null
 sudo apt-get -qq install php7.0-gd > /dev/null
+sudo apt-get -qq install php7.0-zip > /dev/null
 
 # This is probably not necessary
 sudo phpenmod mcrypt
@@ -36,6 +37,7 @@ sudo phpenmod curl
 sudo phpenmod tidy
 sudo phpenmod mcrypt
 sudo phpenmod gd
+sudo phpenmod zip
 
 sudo service php7.0-fpm restart
 
