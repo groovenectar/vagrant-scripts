@@ -41,6 +41,7 @@ sudo phpenmod tidy
 sudo phpenmod mcrypt
 sudo phpenmod gd
 sudo phpenmod zip
+sudo phpenmod imap
 
 sudo service php7.1-fpm restart
 
