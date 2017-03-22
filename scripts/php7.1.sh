@@ -23,6 +23,7 @@ sudo apt-get -qq install php7.1-mcrypt > /dev/null
 sudo apt-get -qq install php7.1-xml > /dev/null
 sudo apt-get -qq install php7.1-mbstring > /dev/null
 sudo apt-get -qq install php7.1-mysqli > /dev/null
+sudo apt-get -qq install php7.1-imap > /dev/null
 sudo apt-get -qq install php7.1-curl > /dev/null
 sudo apt-get -qq install php7.1-tidy > /dev/null
 sudo apt-get -qq install php7.1-gd > /dev/null
