@@ -21,6 +21,7 @@ sudo apt-get -qq install php7.0-mcrypt > /dev/null
 sudo apt-get -qq install php7.0-xml > /dev/null
 sudo apt-get -qq install php7.0-mbstring > /dev/null
 sudo apt-get -qq install php7.0-mysqli > /dev/null
+sudo apt-get -qq install php7.0-imap > /dev/null
 sudo apt-get -qq install php7.0-curl > /dev/null
 sudo apt-get -qq install php7.0-tidy > /dev/null
 sudo apt-get -qq install php7.0-gd > /dev/null
@@ -38,6 +39,7 @@ sudo phpenmod tidy
 sudo phpenmod mcrypt
 sudo phpenmod gd
 sudo phpenmod zip
+sudo phpenmod imap
 
 sudo service php7.0-fpm restart
 
