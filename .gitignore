@@ -1,13 +1,13 @@
 # Misc
-/.vagrant
-/vendor
+.vagrant/
+vendor/
 /webgrind
 /phpmyadmin
 node_modules
 npm-debug.log
 bower_components
 tmp/
-/.modman
+.modman/
 *.tmp
 *.lock
 temp/
@@ -17,9 +17,9 @@ temp/
 .sass-cache
 
 # IDE
-/.idea
-/nbproject/
-/sftp_setup
+.idea/
+nbproject/
+sftp_setup
 *.sublime-project
 *.sublime-workspace
 sftp-config.json
