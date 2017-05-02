@@ -28,6 +28,8 @@ sudo apt-get -qq install php7.1-curl > /dev/null
 sudo apt-get -qq install php7.1-tidy > /dev/null
 sudo apt-get -qq install php7.1-gd > /dev/null
 sudo apt-get -qq install php7.1-zip > /dev/null
+sudo apt-get -qq install php7.1-soap > /dev/null
+
 
 # This is probably not necessary
 sudo phpenmod mcrypt
