@@ -1,6 +1,6 @@
 # Misc
 .vagrant/
-vendor/
+/vendor/
 /webgrind
 /phpmyadmin
 node_modules
