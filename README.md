@@ -18,6 +18,7 @@ Defaults
 To exclude components from provisioning in your box, comment the respective lines in Vagrantfile.
 
 * Ubuntu 16.04 (Chef's version conforming to vagrant standards)
+* Apache2 (Lastest distro apt version)
 * Nginx (Lastest distro apt version)
 * PHP 7.1
 * MySQL (Lastest distro apt version ~ 5.7)
