@@ -1,7 +1,7 @@
 Usage
 -----
 
-Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included with directives that should be a safe starting point for most any project.
+Copy the Vagrantfile to your project, customize, and `vagrant up`. A core .gitignore is included with directives that should be a safe starting point for most any project. Windows users may need to `vagrant up` as adminsitrator in order to use packages that create symlinks (Webgrind and phpMyAdmin).
 
 Notes
 -----
