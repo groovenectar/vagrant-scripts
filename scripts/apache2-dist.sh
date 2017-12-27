@@ -12,7 +12,7 @@ sudo apt-get -qq install apache2 > /dev/null
 echo ">>> Configuring Apache2"
 sudo usermod -a -G www-data vagrant
 
-sudo wget -q -O /etc/apache2/sites-available/${hostname}.conf ${github_url}/apache2/${hostname}.conf
+sudo wget -q -O /etc/apache2/sites-available/${hostname}.conf ${github_url}/apache2/vagrant.conf
 sudo sed -i "s|^\\s*ServerName\s*.*|\\tServerName ${hostname}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*DocumentRoot\s*.*|\\tDocumentRoot ${public_folder}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*<Directory\s*.*|\\t<Directory \"${public_folder}\">|" /etc/apache2/sites-available/${hostname}.conf
