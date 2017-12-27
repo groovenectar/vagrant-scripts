@@ -18,9 +18,9 @@ mysql_root_password   = "root" # We'll assume user "root"
 mysql_create_database = "" # Blank to skip
 
 # VM resources settings
-server_cpus   = "2"    # Cores
-server_memory = "2000" # MB
-server_swap   = "2000" # Options: false | int (MB) - Guideline: Between one or two times the server_memory
+server_cpus   = "4"    # Cores
+server_memory = "4000" # MB
+server_swap   = "4000" # Options: false | int (MB) - Guideline: Between one or two times the server_memory
 
 # Choose distro -- Only tested with Ubuntu 16.04
 # vm_box = "debian/jessie64"  # Debian 8, PHP 5.6, MySQL 5.5
@@ -71,8 +71,11 @@ Vagrant.configure("2") do |config|
 	# Base Packages and Config
 	config.vm.provision "shell", path: "#{github_url}/scripts/base.sh", args: [github_url, server_swap]
 
+	# Apache (Latest distribution-supported version)
+	config.vm.provision "shell", path: "#{github_url}/scripts/apache2-dist.sh", args: [github_url, hostname, public_folder]
+
 	# Nginx (Latest distribution-supported version)
-	config.vm.provision "shell", path: "#{github_url}/scripts/nginx-dist.sh", args: [github_url, hostname, public_folder]
+	# config.vm.provision "shell", path: "#{github_url}/scripts/nginx-dist.sh", args: [github_url, hostname, public_folder]
 
 	# PHP 7.1
 	config.vm.provision "shell", path: "#{github_url}/scripts/php7.1.sh", args: [github_url]
@@ -105,10 +108,10 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "shell", path: "#{github_url}/scripts/xdebug-webgrind.sh", args: [github_url, public_folder]
 	
 	# PHPUnit (Latest ~ 6)
-	# config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-latest.sh", args: [github_url]
+	config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-latest.sh", args: [github_url]
 	
 	# PHPUnit (Version 5.7)
-	config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-5.sh", args: [github_url]
+	# config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-5.sh", args: [github_url]
 	
 	# phpMyAdmin (Recommended, requires Composer)
 	config.vm.provision "shell", path: "#{github_url}/scripts/phpmyadmin.sh", args: [github_url, public_folder, hostname, server_ip]
