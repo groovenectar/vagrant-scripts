@@ -16,14 +16,15 @@ sudo wget -q -O /etc/apache2/sites-available/${hostname}.conf ${github_url}/apac
 sudo sed -i "s|^\\s*ServerName\s*.*|\\tServerName ${hostname}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*DocumentRoot\s*.*|\\tDocumentRoot ${public_folder}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*<Directory\s*.*|\\t<Directory \"${public_folder}\">|" /etc/apache2/sites-available/${hostname}.conf
-sudo ln -sf /etc/apache2/sites-available/${hostname}.conf /etc/apache2/sites-enabled/${hostname}.conf
-sudo a2ensite ${hostname}.conf
+# sudo ln -sf /etc/apache2/sites-available/${hostname}.conf /etc/apache2/sites-enabled/${hostname}.conf
+# The following should perform the task comment on the line above
+sudo a2ensite ${hostname}.conf > /dev/null
 
 sudo sed -i "s/export APACHE_RUN_USER=www-data/export APACHE_RUN_USER=vagrant/" /etc/apache2/envvars
 
-sudo a2enmod rewrite
+sudo a2enmod rewrite > /dev/null
 
-sudo a2dissite 000-default
+sudo a2dissite 000-default > /dev/null
 
 sudo service apache2 restart
 
