@@ -7,7 +7,7 @@ public_folder="$3"
 export DEBIAN_FRONTEND=noninteractive
 
 echo ">>> Installing Apache2"
-sudo apt-get -qq install apache2 > /dev/null
+sudo apt-get -qq install apache2 libapache2-mod-php7.1 > /dev/null
 
 echo ">>> Configuring Apache2"
 sudo usermod -a -G www-data vagrant
