@@ -26,6 +26,12 @@ sudo a2enmod rewrite > /dev/null
 
 sudo a2dissite 000-default > /dev/null
 
+echo ">>> Installing SSL"
+# http://ishan.co/ssl-vagrant-local
+openssl genrsa -out /home/vagrant/${hostname}.key 2048
+openssl req -new -x509 -key /home/vagrant/${hostname}.key -out /home/vagrant/${hostname}.cert -days 3650 -subj /CN=${hostname}
+sudo a2enmod ssl
+
 sudo service apache2 restart
 
 if [[ ${public_folder} != "/var/www/html" ]]; then
