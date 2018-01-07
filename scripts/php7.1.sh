@@ -43,6 +43,8 @@ sudo phpenmod mysqli
 # sudo phpenmod imap
 sudo phpenmod curl
 sudo phpenmod tidy
+sudo phpenmod pdo
+sudo phpenmod pdo_mysql
 sudo phpenmod gd
 sudo phpenmod zip
 # sudo phpenmod soap
