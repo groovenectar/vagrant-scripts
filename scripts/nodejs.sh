@@ -10,9 +10,9 @@ cd ~
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh > /dev/null
 sudo bash nodesource_setup.sh > /dev/null
 sudo apt-get -qq install nodejs > /dev/null
-# :(
-sudo rm /usr/bin/node
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+# :( -- UPDATE -- This process is not necessary anymore
+# sudo rm /usr/bin/node
+# sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 if [[ -f "/home/vagrant/.profile" ]]; then
     # Add new NPM Global Packages location to PATH (.profile)
