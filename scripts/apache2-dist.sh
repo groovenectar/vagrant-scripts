@@ -21,9 +21,9 @@ sudo a2enmod ssl
 sudo wget -q -O /etc/apache2/sites-available/${hostname}.conf ${github_url}/apache2/vagrant.conf
 sudo sed -i "s|^\\s*ServerName\s*.*|\\tServerName ${hostname}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*DocumentRoot\s*.*|\\tDocumentRoot ${public_folder}|" /etc/apache2/sites-available/${hostname}.conf
-sudo sed -i "s|^\\s*SSLCertificateFile\s*.*|\\SSLCertificateFile ${public_folder}|" /etc/apache2/sites-available/${hostname}.conf
-sudo sed -i "s|^\\s*SSLCertificateKeyFile\s*.*|\\SSLCertificateKeyFile ${public_folder}|" /etc/apache2/sites-available/${hostname}.conf
 sudo sed -i "s|^\\s*<Directory\s*.*|\\t<Directory \"${public_folder}\">|" /etc/apache2/sites-available/${hostname}.conf
+sudo sed -i "s|localhost|${hostname}|" /etc/apache2/sites-available/${hostname}.conf
+
 # sudo ln -sf /etc/apache2/sites-available/${hostname}.conf /etc/apache2/sites-enabled/${hostname}.conf
 # The following should perform the task comment on the line above
 sudo a2ensite ${hostname}.conf > /dev/null
