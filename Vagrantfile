@@ -92,6 +92,9 @@ Vagrant.configure("2") do |config|
 	# NodeJS
 	config.vm.provision "shell", path: "#{github_url}/scripts/nodejs.sh", args: [github_url]
 
+	# Yarn
+	config.vm.provision "shell", path: "#{github_url}/scripts/yarn.sh", args: [github_url]
+	
 	# Bower (Requires NodeJS)
 	config.vm.provision "shell", path: "#{github_url}/scripts/bower.sh", args: [github_url]
 
