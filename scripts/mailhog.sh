@@ -89,16 +89,16 @@ then
 	sendmail_path=$(which sendmail)
 
 	sudo mv "${sendmail_path}" "${sendmail_path}.backup"
+fi
 
-	(sudo tee "${sendmail_path}" <<EOL
+(sudo tee "${sendmail_path}" <<EOL
 #!/usr/bin/env bash
 
 /usr/local/mailhog sendmail "\$@"
 EOL
-	) &>/dev/null
+) &>/dev/null
 
-	sudo chmod +x "${sendmail_path}"
-fi
+sudo chmod +x "${sendmail_path}"
 
 echo ""
 echo ""
