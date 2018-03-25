@@ -20,6 +20,7 @@ temp/
 .idea/
 nbproject/
 sftp_setup
+.vscode
 *.sublime-project
 *.sublime-workspace
 sftp-config.json
