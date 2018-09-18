@@ -111,7 +111,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "shell", path: "#{github_url}/scripts/xdebug-webgrind.sh", args: [github_url, public_folder]
 	
 	# PHPUnit (Latest ~ 6)
-	config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-latest.sh", args: [github_url]
+	# config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-latest.sh", args: [github_url]
 	
 	# PHPUnit (Version 5.7)
 	# config.vm.provision "shell", path: "#{github_url}/scripts/phpunit-5.sh", args: [github_url]
